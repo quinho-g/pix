@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Anton&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kaushan+Script&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Press+Start+2P&family=Sixtyfour+Convergence&family=Suez+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kaushan+Script&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Suez+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alan+Sans:wght@300..900&family=Alfa+Slab+One&family=Anton&family=Archivo+Black&family=Arimo:ital,wght@0,400..700;1,400..700&family=BBH+Sans+Hegarty&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Manufacturing+Consent&family=Momo+Trust+Display&family=Momo+Trust+Sans:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nata+Sans:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Playwrite+AU+QLD:wght@100..400&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sixtyfour+Convergence&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Text:wght@200..700&family=Suez+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+/* -- Este código é protegido pelos direitos altorais, não deve ser usado e nem copiado 
+sem a altorização do altor.-- */
+
+
+:root {
+    --letra: 'Stack Sans Text', Arial, Helvetica, sans-serif;
+    --fundo: rgb(21, 21, 21);
+    --cor1: rgb(87, 243, 66);
+    --cor2: rgb(3, 50, 0);
+    --ico: rgb(58, 58, 58);
+}
+
+html {
+    font-size: 1.2vw;
+}
+
+body {
+    position: relative;
+    background-color: var(--fundo);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    perspective: 100000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .5s;
+    color: white;
+}section {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 3rem;
+}
+.aviso {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10000;
+    background-color: var(--cor2);
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem var(--cor1);
+    border-radius: 1rem;
+    opacity: 0;
+    animation: aviso 4s linear;
+    font-weight: bold;
+    img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        box-shadow: 0.1rem 0.1rem 0.2rem var(--cor1);
+    }
+}@keyframes aviso {
+    0% {
+        opacity: 0;
+        right: 0;
+    }
+    30% {
+        opacity: 1;
+        right: 5rem;
+    }
+    80% {
+        opacity: 1;
+        right: 5rem;
+    }
+    100% {
+        opacity: 0;
+        right: 0;
+    }
+}
+.ico {
+    position: absolute;
+    font-size: 30rem;
+    color: var(--ico);
+    z-index: -1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#cartao {
+  display: grid;
+  grid-template-columns: 32.5% 62.5%;
+  gap: 5%;
+  padding: 2rem;
+  width: 80%;
+}.foto {
+  position: relative;
+  width: 100%;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem var(--cor1);
+  }
+  i {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--cor1);
+    background-color: var(--cor2);
+    box-shadow: 0.2rem 0.2rem 0.3rem var(--cor1);
+    animation: icone 1.5s linear infinite alternate;
+  }
+}@keyframes icone {
+    to {
+        transform: translateY(-1rem);
+    }
+}
+.i1 {
+    top: -2rem;
+    left: 3rem;
+}.i2 {
+    bottom: -1rem;
+    left: -2rem;
+}.i3 {
+    top: 5rem;
+    right: -2rem;
+}
+
+.texto-botao {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h2 {
+    font-family: var(--letra);
+    text-align: center;    
+  }
+  span {
+    color: var(--cor1);
+  }
+}.botoes {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.botao {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor2);
+    box-shadow: 0.2rem 0.2rem 0.3rem var(--cor1);
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    width: 100%;
+    transition: 0.2s;
+}.botao:hover {
+    transform: scale(1.05);
+}
+
+/* -- Responsividade para dispositivos moveis -- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+html {
+    font-size: 1.8vw;
+}
+section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}.aviso {
+    width: 60%;
+    top: 0;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+}@keyframes aviso {
+    0% {
+        opacity: 0;
+        right: unset;
+        top: 0;
+    }
+    30% {
+        opacity: 1;
+        right: unset;
+        top: 5rem;
+    }
+    80% {
+        opacity: 1;
+        right: unset;
+        top: 5rem;
+    }
+    100% {
+        opacity: 0;
+        right: unset;
+        top: 0;
+    }
+}.ico {
+    font-size: 40rem;
+}
+#cartao {
+  grid-template-columns: auto;
+  gap: 3rem;
+  padding: 0rem;
+  width: 70%;
+}.foto {
+  width: 80%;
+  margin: 0 auto;
+  i {
+    width: 8rem;
+    height: 8rem;
+    font-size: 4rem;
+  }
+}.botoes {
+    grid-template-columns: auto;
+    gap: 1.5rem;
+}
+.botao {
+    padding: 1.5rem;
+}.botao:hover {
+    transform: scale(1);
+}
+}
+
+
+
+@media (max-width: 767px) {
+
+html {
+    font-size: 2.7vw;
+}
+a:hover {
+    transform: scale(1.0);
+}.aviso {
+    width: 80%;
+    top: 0;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+}@keyframes aviso {
+    0% {
+        opacity: 0;
+        right: unset;
+        top: 0;
+    }
+    30% {
+        opacity: 1;
+        right: unset;
+        top: 5rem;
+    }
+    80% {
+        opacity: 1;
+        right: unset;
+        top: 5rem;
+    }
+    100% {
+        opacity: 0;
+        right: unset;
+        top: 0;
+    }
+}.ico {
+    font-size: 30rem;
+}
+#cartao {
+  grid-template-columns: auto;
+  gap: 3rem;
+  width: 80%;
+}.foto {
+  width: 90%;
+  margin: 0 auto;
+  img {
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--cor1);
+  }
+  i {
+    width: 7rem;
+    height: 7rem;
+    font-size: 3.5rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem var(--cor1);
+  }
+}.botoes {
+    grid-template-columns: auto;
+    gap: 1.5rem;
+}
+
+.botao {
+    padding: 1.5rem;
+}.botao:hover {
+    transform: scale(1);
+}
+
+} 
+
+
+
+
+
